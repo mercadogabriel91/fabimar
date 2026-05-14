@@ -55,6 +55,8 @@ temp/
 *.tmp
 *.swp
 
-# dirs
-docs/
+# Sensitive source material
 requirements/
+docs/*
+!docs/spec-driven-development.md
+!docs/mvp-roadmap.md

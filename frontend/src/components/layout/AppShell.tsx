@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 
 type AppShellProps = {
   children: ReactNode
@@ -13,6 +13,8 @@ const navigationItems = [
 ]
 
 export function AppShell({ children }: AppShellProps) {
+  const location = useLocation()
+
   return (
     <div className="app-shell">
       <header className="site-header">
@@ -28,7 +30,9 @@ export function AppShell({ children }: AppShellProps) {
         </nav>
       </header>
 
-      <main>{children}</main>
+      <main className="route-stage" key={location.pathname}>
+        {children}
+      </main>
 
       <footer className="site-footer">
         <p>Productos y servicios con proposito.</p>
