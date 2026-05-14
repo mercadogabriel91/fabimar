@@ -1,0 +1,12 @@
+{
+  "name": "fabimar-workspace",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "pnpm --filter @fabimar/frontend dev",
+    "build": "pnpm --filter @fabimar/frontend build",
+    "lint": "pnpm --filter @fabimar/frontend lint",
+    "typecheck": "pnpm --filter @fabimar/frontend typecheck",
+    "preview": "pnpm --filter @fabimar/frontend preview"
+  }
+}
