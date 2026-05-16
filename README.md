@@ -1,6 +1,6 @@
 # Fabimar 2026 MVP Workspace
 
-Active spec: `SPEC-001: Project Setup`
+Active spec: `SPEC-004: Product Showroom` (next). Completed: `SPEC-001`, `SPEC-002`, `SPEC-003`.
 
 This repository starts as a frontend-only MVP for the Fabimar 2026 showroom. The app lives in `frontend/` and uses Vite, React, TypeScript, local fixture data, and route placeholders for the public MVP experience.
 

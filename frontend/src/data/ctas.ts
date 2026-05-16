@@ -1,6 +1,6 @@
 import type { Cta } from './types.ts'
 
-const fabimarWhatsApp = '5491100000000'
+const fabimarWhatsApp = '+5555555555555'
 
 export function createWhatsAppUrl(message: string) {
   const encodedMessage = encodeURIComponent(message)

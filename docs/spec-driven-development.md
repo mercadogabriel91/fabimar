@@ -124,7 +124,7 @@ Acceptance criteria:
 
 ### SPEC-002: Visual System And Layout Primitives
 
-Status: In progress
+Status: Complete
 
 Goal: establish the premium visual system used across the MVP.
 
@@ -156,21 +156,21 @@ Tasks:
 - [x] Build visual card primitive.
 - [x] Build CTA button/link primitive.
 - [x] Build responsive grid primitive.
-- [ ] Build drawer or panel primitive if product details need it.
+- [x] Build drawer or panel primitive if product details need it.
 - [x] Add restrained fade, blur, and hover motion primitives.
 - [x] Add accessibility defaults for focus, landmarks, headings, link labels, and reduced motion.
 
 Acceptance criteria:
 
-- [ ] A blank route using the shell already feels visually aligned with the Fabimar direction.
-- [ ] Components behave cleanly on mobile and desktop.
-- [ ] Visual primitives can support home, product, brand, service, and wishlist routes.
+- [x] A blank route using the shell already feels visually aligned with the Fabimar direction.
+- [x] Components behave cleanly on mobile and desktop.
+- [x] Visual primitives can support home, product, brand, service, and wishlist routes.
 
 ## STAGE-2: Public MVP Experience
 
 ### SPEC-003: Home Experience
 
-Status: Not started
+Status: Complete
 
 Goal: deliver the premium first impression and route users clearly into Productos or Servicios.
 
@@ -190,20 +190,20 @@ Out of scope:
 
 Tasks:
 
-- [ ] Build home hero with dominant image.
-- [ ] Add manifesto phrase.
-- [ ] Add Productos entry card.
-- [ ] Add Servicios entry card.
-- [ ] Add Proposito link or section teaser.
-- [ ] Add contact or WhatsApp CTA.
-- [ ] Tune mobile layout for the two primary doors.
-- [ ] Add route metadata.
+- [x] Build home hero with dominant image.
+- [x] Add manifesto phrase.
+- [x] Add Productos entry card.
+- [x] Add Servicios entry card.
+- [x] Add Proposito link or section teaser.
+- [x] Add contact or WhatsApp CTA.
+- [x] Tune mobile layout for the two primary doors.
+- [x] Add route metadata.
 
 Acceptance criteria:
 
-- [ ] A first-time visitor understands the two main paths within seconds.
-- [ ] The page feels calm, premium, and image-led.
-- [ ] Primary CTAs work on mobile and desktop.
+- [x] A first-time visitor understands the two main paths within seconds.
+- [x] The page feels calm, premium, and image-led.
+- [x] Primary CTAs work on mobile and desktop.
 
 ### SPEC-004: Product Showroom
 

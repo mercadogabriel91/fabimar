@@ -65,44 +65,44 @@ Acceptance check:
 
 ## Milestone 1: App Shell And Design System
 
-Status: Not started
+Status: Complete
 
 Purpose: create the visual base that every screen will share.
 
 Tasks:
 
-- [ ] Initialize Vite React with TypeScript.
-- [ ] Add routing.
-- [ ] Establish typography scale, spacing tokens, colors, and image ratios.
-- [ ] Create base layout components: page shell, header, footer, section, grid, card, drawer/panel, CTA button.
-- [ ] Create responsive behavior for mobile-first browsing.
-- [ ] Add basic accessibility defaults: semantic landmarks, focus states, alt text conventions.
+- [x] Initialize Vite React with TypeScript.
+- [x] Add routing.
+- [x] Establish typography scale, spacing tokens, colors, and image ratios.
+- [x] Create base layout components: page shell, header, footer, section, grid, card, drawer/panel, CTA button.
+- [x] Create responsive behavior for mobile-first browsing.
+- [x] Add basic accessibility defaults: semantic landmarks, focus states, alt text conventions.
 
 Acceptance check:
 
-- [ ] A blank page using the shell already feels aligned with the Apple/Patagonia/Tesla-style calm premium direction.
+- [x] A blank page using the shell already feels aligned with the Apple/Patagonia/Tesla-style calm premium direction.
 
 ## Milestone 2: Home Experience
 
-Status: Not started
+Status: Complete
 
 Purpose: make the first impression strong and clarify the two primary paths.
 
 Tasks:
 
-- [ ] Build the home hero with dominant image and manifesto phrase.
-- [ ] Add two clear entry cards: Productos and Servicios.
-- [ ] Add a subtle Proposito block or link.
-- [ ] Add a contact/WhatsApp entry point.
-- [ ] Tune mobile layout so the two doors remain obvious and tactile.
+- [x] Build the home hero with dominant image and manifesto phrase.
+- [x] Add two clear entry cards: Productos and Servicios.
+- [x] Add a subtle Proposito block or link.
+- [x] Add a contact/WhatsApp entry point.
+- [x] Tune mobile layout so the two doors remain obvious and tactile.
 
 Acceptance check:
 
-- [ ] A first-time visitor understands within seconds where to go for products or services.
+- [x] A first-time visitor understands within seconds where to go for products or services.
 
 ## Milestone 3: Product Showroom
 
-Status: Not started
+Status: Not started (next)
 
 Purpose: validate the product browsing model and product detail presentation.
 

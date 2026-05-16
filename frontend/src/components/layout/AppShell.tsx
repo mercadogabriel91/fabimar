@@ -1,5 +1,6 @@
 import type { ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import { ctas } from '../../data/ctas.ts'
 
 type AppShellProps = {
   children: ReactNode
@@ -36,8 +37,11 @@ export function AppShell({ children }: AppShellProps) {
 
       <footer className="site-footer">
         <p>Productos y servicios con proposito.</p>
-        <a href="https://wa.me/" aria-label="Contactar a Fabimar por WhatsApp">
-          Hablar con asesor
+        <a
+          href={ctas.general.whatsappUrl}
+          aria-label="Contactar a Fabimar por WhatsApp"
+        >
+          {ctas.general.label}
         </a>
       </footer>
     </div>
