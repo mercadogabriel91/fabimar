@@ -207,7 +207,7 @@ Acceptance criteria:
 
 ### SPEC-004: Product Showroom
 
-Status: Not started
+Status: Complete
 
 Goal: validate product discovery by category, brand, and new/used-selected state.
 
@@ -231,29 +231,29 @@ Out of scope:
 
 Tasks:
 
-- [ ] Define product fixture type.
-- [ ] Define brand fixture type.
-- [ ] Define category fixture type.
-- [ ] Create representative product fixtures.
-- [ ] Create representative brand fixtures.
-- [ ] Create representative category fixtures.
-- [ ] Build `/productos` dual-entry page.
-- [ ] Build product/category browsing view.
-- [ ] Add Nuevo filter.
-- [ ] Add Usado Seleccionado filter.
-- [ ] Add Marca filter.
-- [ ] Build brand grid.
-- [ ] Build brand universe page.
-- [ ] Build image-led product cards.
-- [ ] Add subtle visual treatment for Usado Seleccionado.
-- [ ] Add empty states for filter combinations.
+- [x] Define product fixture type.
+- [x] Define brand fixture type.
+- [x] Define category fixture type.
+- [x] Create representative product fixtures.
+- [x] Create representative brand fixtures.
+- [x] Create representative category fixtures.
+- [x] Build `/productos` dual-entry page.
+- [x] Build product/category browsing view.
+- [x] Add Nuevo filter.
+- [x] Add Usado Seleccionado filter.
+- [x] Add Marca filter.
+- [x] Build brand grid.
+- [x] Build brand universe page.
+- [x] Build image-led product cards.
+- [x] Add subtle visual treatment for Usado Seleccionado.
+- [x] Add empty states for filter combinations.
 
 Acceptance criteria:
 
-- [ ] A reviewer can browse by product/category.
-- [ ] A reviewer can browse by brand.
-- [ ] New and used-selected product states are visible and understandable.
-- [ ] Product cards are visually strong enough to support the showroom concept.
+- [x] A reviewer can browse by product/category.
+- [x] A reviewer can browse by brand.
+- [x] New and used-selected product states are visible and understandable.
+- [x] Product cards are visually strong enough to support the showroom concept.
 
 ### SPEC-005: Product Detail And CTA
 

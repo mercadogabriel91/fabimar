@@ -1,42 +1,86 @@
+import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { ProductFilters, type StateFilter } from '../components/products/ProductFilters.tsx'
+import { ProductGrid } from '../components/products/ProductGrid.tsx'
+import { ProductPreviewPanel } from '../components/products/ProductPreviewPanel.tsx'
+import { DetailPanel } from '../components/ui/DetailPanel.tsx'
+import { Section } from '../components/ui/Section.tsx'
 import { brands } from '../data/brands.ts'
 import { products } from '../data/products.ts'
+import { usePageMeta } from '../hooks/usePageMeta.ts'
+import { useShowroomPanel } from '../hooks/useShowroomPanel.ts'
 
 export function BrandPage() {
   const { brandId } = useParams()
   const brand = brands.find((item) => item.id === brandId)
-  const brandProducts = products.filter((product) => product.brandId === brandId)
+  const [stateFilter, setStateFilter] = useState<StateFilter>('all')
+  const { selectedProduct, openProduct, closePanel, isOpen } = useShowroomPanel()
+
+  usePageMeta({
+    title: brand ? `${brand.name} | Fabimar` : 'Marca | Fabimar',
+    description: brand?.description,
+  })
 
   if (!brand) {
     return (
-      <section className="page-section">
+      <Section>
         <p className="eyebrow">Marca</p>
         <h1>Marca no encontrada</h1>
         <Link className="text-link" to="/productos">
           Volver a productos
         </Link>
-      </section>
+      </Section>
     )
   }
 
+  const brandProductCount = products.filter((product) => product.brandId === brand.id).length
+
   return (
-    <section className="page-section">
-      <p className="eyebrow">Universo de marca</p>
-      <h1>{brand.name} by Fabimar</h1>
-      <p className="lede">{brand.description}</p>
-      <div className="route-grid">
-        {brandProducts.map((product) => (
-          <Link
-            className="surface-card product-card"
-            key={product.id}
-            to={`/productos/${product.id}`}
-          >
-            <span className="status-pill">{product.state}</span>
-            <h2>{product.name}</h2>
-            <p>{product.benefit}</p>
+    <>
+      <Section className="showroom-page showroom-page--brand">
+        <div className="showroom-toolbar">
+          <Link className="text-link" to="/productos">
+            Volver a productos
           </Link>
-        ))}
-      </div>
-    </section>
+        </div>
+        <p className="eyebrow">Universo de marca</p>
+        <h1>{brand.name} by Fabimar</h1>
+        <p className="lede">{brand.description}</p>
+        <div
+          className={`showroom-brand-hero showroom-brand-hero--${brand.visualTone}`}
+          role="img"
+          aria-label={`Espacio visual ${brand.name}`}
+        >
+          <span className="showroom-brand-hero__mark">{brand.logoLabel}</span>
+          <span className="showroom-brand-hero__meta">
+            {brandProductCount} {brandProductCount === 1 ? 'producto' : 'productos'} curados
+          </span>
+        </div>
+
+        <ProductFilters
+          stateFilter={stateFilter}
+          brandFilter={brand.id}
+          onStateChange={setStateFilter}
+          onBrandChange={() => undefined}
+          showBrandFilter={false}
+        />
+        <ProductGrid
+          brandId={brand.id}
+          stateFilter={stateFilter}
+          brandFilter="all"
+          onSelect={openProduct}
+          emptyMessage="No hay productos de esta marca con los filtros seleccionados."
+        />
+      </Section>
+
+      <DetailPanel
+        open={isOpen && Boolean(selectedProduct)}
+        onClose={closePanel}
+        title={selectedProduct?.name ?? ''}
+        eyebrow={selectedProduct?.state}
+      >
+        {selectedProduct ? <ProductPreviewPanel product={selectedProduct} /> : null}
+      </DetailPanel>
+    </>
   )
 }

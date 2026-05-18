@@ -7,11 +7,14 @@ export type Category = {
   highlight: string
 }
 
+export type VisualTone = 'warm' | 'cool' | 'neutral'
+
 export type Brand = {
   id: string
   name: string
   description: string
   logoLabel: string
+  visualTone: VisualTone
 }
 
 export type Product = {
@@ -24,6 +27,7 @@ export type Product = {
   warranty: string
   benefit: string
   images: string[]
+  visualTone: VisualTone
   supports360: boolean
   supports3d: boolean
   whatsappUrl: string

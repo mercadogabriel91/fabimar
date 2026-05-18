@@ -19,7 +19,18 @@ export function ProductDetailPage() {
 
   return (
     <section className="page-section detail-layout">
-      <div className="detail-media" aria-label={`Galeria de ${product.name}`} />
+      <div
+        className={`detail-media detail-media--${product.visualTone}`}
+        aria-label={`Galeria de ${product.name}`}
+      >
+        <img
+          className="detail-media__image"
+          src={product.images[0]}
+          alt=""
+          loading="eager"
+          decoding="async"
+        />
+      </div>
       <div>
         <p className="eyebrow">{product.brandId}</p>
         <h1>{product.name}</h1>

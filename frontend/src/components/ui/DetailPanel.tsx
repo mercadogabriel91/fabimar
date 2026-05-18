@@ -1,4 +1,5 @@
-import { useEffect, useId, type ReactNode } from 'react'
+import { useEffect, useId, useRef, type ReactNode } from 'react'
+import { createPortal } from 'react-dom'
 
 type DetailPanelProps = {
   open: boolean
@@ -16,14 +17,26 @@ export function DetailPanel({
   children,
 }: DetailPanelProps) {
   const titleId = useId()
+  const bodyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!open) {
       return
     }
 
-    const previousOverflow = document.body.style.overflow
-    document.body.style.overflow = 'hidden'
+    const scrollY = window.scrollY
+    const { style } = document.body
+    const previous = {
+      position: style.position,
+      top: style.top,
+      width: style.width,
+      overflow: style.overflow,
+    }
+
+    style.position = 'fixed'
+    style.top = `-${scrollY}px`
+    style.width = '100%'
+    style.overflow = 'hidden'
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -34,16 +47,28 @@ export function DetailPanel({
     window.addEventListener('keydown', handleKeyDown)
 
     return () => {
-      document.body.style.overflow = previousOverflow
+      style.position = previous.position
+      style.top = previous.top
+      style.width = previous.width
+      style.overflow = previous.overflow
+      window.scrollTo(0, scrollY)
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [open, onClose])
+
+  useEffect(() => {
+    if (!open) {
+      return
+    }
+
+    bodyRef.current?.scrollTo({ top: 0 })
+  }, [open, title])
 
   if (!open) {
     return null
   }
 
-  return (
+  return createPortal(
     <div className="detail-panel-root">
       <button
         type="button"
@@ -71,8 +96,11 @@ export function DetailPanel({
             ×
           </button>
         </header>
-        <div className="detail-panel-body">{children}</div>
+        <div className="detail-panel-body" ref={bodyRef}>
+          {children}
+        </div>
       </aside>
-    </div>
+    </div>,
+    document.body,
   )
 }
