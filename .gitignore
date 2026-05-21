@@ -60,3 +60,5 @@ requirements/
 docs/*
 !docs/spec-driven-development.md
 !docs/mvp-roadmap.md
+
+/frontend/public/fixtures/

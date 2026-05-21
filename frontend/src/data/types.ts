@@ -26,6 +26,7 @@ export type Product = {
   condition: string
   warranty: string
   benefit: string
+  description: string
   images: string[]
   visualTone: VisualTone
   supports360: boolean

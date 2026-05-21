@@ -11,7 +11,13 @@ export const products: Product[] = [
     condition: 'Equipo nuevo en caja cerrada.',
     warranty: '24 meses de asistencia Fabimar post compra.',
     benefit: 'Una heladera protagonista, pensada para ordenar y elevar la cocina.',
-    images: ['/fixtures/products/samsung-family-hub-01.jpg'],
+    description:
+      'Pantalla central, organización visual y una presencia que ordena la cocina sin gritar.',
+    images: [
+      '/fixtures/products/samsung-family-hub-01.jpg',
+      '/fixtures/products/samsung-family-hub-01.jpg',
+      '/fixtures/products/samsung-family-hub-01.jpg',
+    ],
     visualTone: 'cool',
     supports360: true,
     supports3d: false,
@@ -28,7 +34,12 @@ export const products: Product[] = [
     condition: 'Inspeccionado, sanitizado y certificado por Fabimar.',
     warranty: 'Garantia Fabimar sobre funcionamiento inicial.',
     benefit: 'Diseno modular con una segunda vida impecable.',
-    images: ['/fixtures/products/samsung-bespoke-cool-01.jpg'],
+    description:
+      'Modularidad Bespoke con una segunda vida revisada, lista para integrarse a tu cocina.',
+    images: [
+      '/fixtures/products/samsung-bespoke-cool-01.jpg',
+      '/fixtures/products/samsung-bespoke-cool-01.jpg',
+    ],
     visualTone: 'cool',
     supports360: false,
     supports3d: false,
@@ -45,7 +56,12 @@ export const products: Product[] = [
     condition: 'Revisado, reacondicionado y listo para una nueva etapa.',
     warranty: 'Garantia Fabimar sobre funcionamiento inicial.',
     benefit: 'Confort eficiente con una segunda vida cuidada.',
-    images: ['/fixtures/products/lg-dual-inverter-01.jpg'],
+    description:
+      'Climatización eficiente y silenciosa, seleccionada para rendir sin comprometer el ambiente.',
+    images: [
+      '/fixtures/products/lg-dual-inverter-01.jpg',
+      '/fixtures/products/lg-dual-inverter-01.jpg',
+    ],
     visualTone: 'neutral',
     supports360: false,
     supports3d: false,
@@ -62,7 +78,13 @@ export const products: Product[] = [
     condition: 'Equipo nuevo con documentacion completa.',
     warranty: '24 meses de asistencia Fabimar post compra.',
     benefit: 'Presencia espejada y climatizacion silenciosa para living.',
-    images: ['/fixtures/products/lg-artcool-mirror-01.jpg'],
+    description:
+      'Frente espejado y flujo suave para living premium donde el equipo desaparece en la arquitectura.',
+    images: [
+      '/fixtures/products/lg-artcool-mirror-01.jpg',
+      '/fixtures/products/lg-artcool-mirror-01.jpg',
+      '/fixtures/products/lg-artcool-mirror-01.jpg',
+    ],
     visualTone: 'neutral',
     supports360: true,
     supports3d: false,
@@ -79,7 +101,13 @@ export const products: Product[] = [
     condition: 'Equipo nuevo con documentacion completa.',
     warranty: '24 meses de asistencia Fabimar post compra.',
     benefit: 'Funcion silenciosa, presencia calma y uso cotidiano simple.',
-    images: ['/fixtures/products/whirlpool-silent-care-01.jpg'],
+    description:
+      'Tecnología cotidiana con operación silenciosa y una estética cálida que invita al uso diario.',
+    images: [
+      '/fixtures/products/whirlpool-silent-care-01.jpg',
+      '/fixtures/products/whirlpool-silent-care-01.jpg',
+      '/fixtures/products/whirlpool-silent-care-01.jpg',
+    ],
     visualTone: 'warm',
     supports360: false,
     supports3d: true,
@@ -96,7 +124,12 @@ export const products: Product[] = [
     condition: 'Seleccionado por rendimiento y estetica conservada.',
     warranty: 'Garantia Fabimar sobre funcionamiento inicial.',
     benefit: 'Control intuitivo y capacidad para familias activas.',
-    images: ['/fixtures/products/whirlpool-6th-sense-01.jpg'],
+    description:
+      'Control intuitivo y capacidad generosa, curado para hogares que necesitan orden y respuesta rápida.',
+    images: [
+      '/fixtures/products/whirlpool-6th-sense-01.jpg',
+      '/fixtures/products/whirlpool-6th-sense-01.jpg',
+    ],
     visualTone: 'warm',
     supports360: false,
     supports3d: false,
@@ -113,7 +146,13 @@ export const products: Product[] = [
     condition: 'Equipo nuevo en caja cerrada.',
     warranty: '24 meses de asistencia Fabimar post compra.',
     benefit: 'Flujo suave sin corrientes directas, ideal para descanso.',
-    images: ['/fixtures/products/samsung-windfree-01.jpg'],
+    description:
+      'Microorificios WindFree para dormir sin corrientes directas, con presencia sobria en el ambiente.',
+    images: [
+      '/fixtures/products/samsung-windfree-01.jpg',
+      '/fixtures/products/samsung-windfree-01.jpg',
+      '/fixtures/products/samsung-windfree-01.jpg',
+    ],
     visualTone: 'cool',
     supports360: false,
     supports3d: true,
@@ -130,7 +169,13 @@ export const products: Product[] = [
     condition: 'Panel tactil verificado y sellos revisados por Fabimar.',
     warranty: 'Garantia Fabimar sobre funcionamiento inicial.',
     benefit: 'Acceso rapido con una pieza usada de alto criterio.',
-    images: ['/fixtures/products/lg-instaview-01.jpg'],
+    description:
+      'Dos golpes en el panel InstaView y acceso inmediato, con una pieza usada certificada por Fabimar.',
+    images: [
+      '/fixtures/products/lg-instaview-01.jpg',
+      '/fixtures/products/lg-instaview-01.jpg',
+      '/fixtures/products/lg-instaview-01.jpg',
+    ],
     visualTone: 'neutral',
     supports360: true,
     supports3d: false,

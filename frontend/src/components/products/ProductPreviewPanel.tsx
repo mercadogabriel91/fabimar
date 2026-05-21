@@ -1,7 +1,8 @@
-import { getBrandName } from '../../data/brands.ts'
 import type { Product } from '../../data/types.ts'
-import { CtaLink } from '../ui/CtaLink.tsx'
-import { PrimaryButton } from '../ui/PrimaryButton.tsx'
+import { ProductDetailActions } from './ProductDetailActions.tsx'
+import { ProductDetailMeta } from './ProductDetailMeta.tsx'
+import { ProductFeatureBadges } from './ProductFeatureBadges.tsx'
+import { ProductGallery } from './ProductGallery.tsx'
 
 type ProductPreviewPanelProps = {
   product: Product
@@ -12,43 +13,18 @@ export function ProductPreviewPanel({ product }: ProductPreviewPanelProps) {
 
   return (
     <div className="product-preview">
-      <div
-        className={`product-preview__media product-preview__media--${product.visualTone}${isUsed ? ' product-preview__media--used' : ''}`}
-        role="img"
-        aria-label={product.name}
-      >
-        <img
-          className="product-preview__image"
-          src={product.images[0]}
-          alt=""
-          loading="lazy"
-          decoding="async"
-          onError={(event) => {
-            event.currentTarget.classList.add('product-preview__image--fallback')
-          }}
-        />
-      </div>
+      <ProductGallery
+        images={product.images}
+        name={product.name}
+        visualTone={product.visualTone}
+        isUsed={isUsed}
+        compact
+      />
       <p className="lede">{product.benefit}</p>
-      <dl className="detail-list">
-        <div>
-          <dt>Marca</dt>
-          <dd>{getBrandName(product.brandId)}</dd>
-        </div>
-        <div>
-          <dt>Estado</dt>
-          <dd>{product.state}</dd>
-        </div>
-        <div>
-          <dt>Condicion</dt>
-          <dd>{product.condition}</dd>
-        </div>
-      </dl>
-      <div className="product-preview__actions">
-        <PrimaryButton href={product.whatsappUrl} external>
-          Hablar con asesor
-        </PrimaryButton>
-        <CtaLink to={`/productos/${product.id}`}>Ver ficha completa</CtaLink>
-      </div>
+      <p className="product-detail__description">{product.description}</p>
+      <ProductFeatureBadges product={product} />
+      <ProductDetailMeta product={product} />
+      <ProductDetailActions product={product} showFullPageLink />
     </div>
   )
 }

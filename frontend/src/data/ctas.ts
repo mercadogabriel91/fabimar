@@ -8,6 +8,10 @@ export function createWhatsAppUrl(message: string) {
   return `https://wa.me/${fabimarWhatsApp}?text=${encodedMessage}`
 }
 
+export function createProductWhatsAppUrl(productName: string) {
+  return createWhatsAppUrl(`Hola Fabimar, quiero consultar por ${productName}.`)
+}
+
 export const ctas: Record<string, Cta> = {
   general: {
     label: 'Hablar con asesor',

@@ -257,7 +257,7 @@ Acceptance criteria:
 
 ### SPEC-005: Product Detail And CTA
 
-Status: Not started
+Status: Complete
 
 Goal: present a product as a premium object and make inquiry frictionless.
 
@@ -280,24 +280,24 @@ Out of scope:
 
 Tasks:
 
-- [ ] Build product detail route or panel.
-- [ ] Render product gallery.
-- [ ] Render short benefit and description.
-- [ ] Render product state.
-- [ ] Render condition.
-- [ ] Render warranty.
-- [ ] Render optional 360 badge.
-- [ ] Render optional 3D badge.
-- [ ] Build WhatsApp URL helper using fixture data.
-- [ ] Add Hablar con asesor CTA.
-- [ ] Add Agregar a wishlist action.
-- [ ] Add responsive detail layout.
+- [x] Build product detail route or panel.
+- [x] Render product gallery.
+- [x] Render short benefit and description.
+- [x] Render product state.
+- [x] Render condition.
+- [x] Render warranty.
+- [x] Render optional 360 badge.
+- [x] Render optional 3D badge.
+- [x] Build WhatsApp URL helper using fixture data.
+- [x] Add Hablar con asesor CTA.
+- [x] Add Agregar a wishlist action.
+- [x] Add responsive detail layout.
 
 Acceptance criteria:
 
-- [ ] A reviewer can open a product and understand why it is desirable.
-- [ ] WhatsApp opens with a product-specific pre-filled message.
-- [ ] 360/3D are communicated as future-ready without implying full functionality.
+- [x] A reviewer can open a product and understand why it is desirable.
+- [x] WhatsApp opens with a product-specific pre-filled message.
+- [x] 360/3D are communicated as future-ready without implying full functionality.
 
 ### SPEC-006: Services Showroom
 
