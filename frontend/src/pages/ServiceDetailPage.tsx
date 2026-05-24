@@ -3,6 +3,7 @@ import { ServiceMedia } from '../components/services/ServiceMedia.tsx'
 import { PrimaryButton } from '../components/ui/PrimaryButton.tsx'
 import { getServiceById } from '../data/services.ts'
 import { usePageMeta } from '../hooks/usePageMeta.ts'
+import { routes } from '../routes.ts'
 
 export function ServiceDetailPage() {
   const { serviceId } = useParams()
@@ -18,7 +19,7 @@ export function ServiceDetailPage() {
       <section className="page-section services-section">
         <p className="eyebrow">Servicio</p>
         <h1>Servicio no encontrado</h1>
-        <Link className="text-link" to="/servicios">
+        <Link className="text-link" to={routes.services}>
           Volver a servicios
         </Link>
       </section>
@@ -29,7 +30,7 @@ export function ServiceDetailPage() {
     <section className="page-section detail-layout services-section service-detail">
       <ServiceMedia image={service.image} name={service.name} large />
       <div className="service-detail__copy">
-        <Link className="text-link" to="/servicios">
+        <Link className="text-link" to={routes.services}>
           Volver a servicios
         </Link>
         <p className="eyebrow">{service.highlight}</p>

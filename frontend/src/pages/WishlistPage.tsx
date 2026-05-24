@@ -1,4 +1,5 @@
 import { PagePlaceholder } from '../components/ui/PagePlaceholder.tsx'
+import { routes } from '../routes.ts'
 
 export function WishlistPage() {
   return (
@@ -7,7 +8,7 @@ export function WishlistPage() {
       title="Un primer paso hacia la conversacion."
       description="Ruta reservada para simular una lista local de productos y convertirla en una consulta por WhatsApp en SPEC-008."
       primaryLabel="Volver a productos"
-      primaryTo="/productos"
+      primaryTo={routes.products}
     />
   )
 }

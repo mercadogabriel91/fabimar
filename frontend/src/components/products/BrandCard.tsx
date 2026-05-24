@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Brand } from '../../data/types.ts'
+import { routes } from '../../routes.ts'
 
 type BrandCardProps = {
   brand: Brand
@@ -10,7 +11,7 @@ export function BrandCard({ brand, productCount }: BrandCardProps) {
   return (
     <Link
       className={`showroom-brand-card showroom-brand-card--${brand.visualTone}`}
-      to={`/marcas/${brand.id}`}
+      to={routes.brand(brand.id)}
     >
       <span className="showroom-brand-card__mark">{brand.logoLabel}</span>
       <h2>{brand.name}</h2>

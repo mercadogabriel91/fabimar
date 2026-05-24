@@ -22,12 +22,14 @@ Package management uses `pnpm` workspaces.
 After installing dependencies, run `pnpm dev` and verify these routes render:
 
 - `/`
-- `/productos`
-- `/productos/samsung-family-hub`
-- `/marcas/samsung`
-- `/servicios`
-- `/servicios/mudanzas`
-- `/proposito`
+- `/products`
+- `/products/samsung-family-hub`
+- `/brands/samsung`
+- `/services`
+- `/services/mudanzas`
+- `/purpose`
 - `/wishlist`
+
+Legacy Spanish URLs (`/productos`, `/servicios`, `/proposito`, `/marcas/...`) redirect to the English paths.
 
 This smoke check satisfies the `SPEC-001` manual verification step. Deeper product, service, wishlist, and visual polish behavior belongs to later specs.

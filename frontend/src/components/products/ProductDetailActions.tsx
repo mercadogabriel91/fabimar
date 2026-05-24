@@ -1,5 +1,6 @@
 import { useWishlist } from '../../hooks/useWishlist.ts'
 import type { Product } from '../../data/types.ts'
+import { routes } from '../../routes.ts'
 import { CtaLink } from '../ui/CtaLink.tsx'
 import { PrimaryButton } from '../ui/PrimaryButton.tsx'
 
@@ -30,7 +31,7 @@ export function ProductDetailActions({
         {inWishlist ? 'En wishlist' : 'Agregar a wishlist'}
       </button>
       {showFullPageLink ? (
-        <CtaLink to={`/productos/${product.id}`}>Ver ficha completa</CtaLink>
+        <CtaLink to={routes.productDetail(product.id)}>Ver ficha completa</CtaLink>
       ) : null}
     </div>
   )
