@@ -5,6 +5,7 @@ export const services: Service[] = [
   {
     id: 'mudanzas',
     name: 'Mudanzas Corporativas y Residenciales',
+    highlight: 'Mudanzas',
     summary: 'Traslados cuidados para hogares, equipos y espacios de trabajo.',
     description:
       'Planificacion clara, trato humano y ejecucion ordenada para cada movimiento.',
@@ -18,6 +19,7 @@ export const services: Service[] = [
   {
     id: 'distribucion-b2b',
     name: 'Distribucion B2B',
+    highlight: 'Distribucion',
     summary: 'Entregas para empresas que necesitan precision y continuidad.',
     description:
       'Operacion sobria para distribuir productos con trazabilidad humana y criterio.',
@@ -31,6 +33,7 @@ export const services: Service[] = [
   {
     id: 'logistica-integral',
     name: 'Logistica Integral',
+    highlight: 'Logistica',
     summary: 'Un marco operativo para resolver movimientos complejos.',
     description:
       'Diseno de circuito, coordinacion de recursos y acompanamiento de punta a punta.',
@@ -44,6 +47,7 @@ export const services: Service[] = [
   {
     id: 'transporte-especializado',
     name: 'Transporte Especializado',
+    highlight: 'Transporte',
     summary: 'Movimiento de piezas que requieren cuidado y criterio tecnico.',
     description:
       'Servicio pensado para objetos, equipos o entregas que no admiten improvisacion.',
@@ -55,3 +59,7 @@ export const services: Service[] = [
     ),
   },
 ]
+
+export function getServiceById(serviceId: string): Service | undefined {
+  return services.find((service) => service.id === serviceId)
+}

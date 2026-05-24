@@ -61,7 +61,7 @@ h1 {
   font-size: clamp(3rem, 10vw, 7.5rem);
   font-weight: 500;
   letter-spacing: -0.075em;
-  line-height: 0.92;
+  line-height: 1.06;
 }
 
 h2 {
@@ -356,8 +356,7 @@ h2 {
   gap: 1rem;
 }
 
-.product-card,
-.service-card {
+.product-card {
   min-height: 230px;
 }
 
@@ -993,11 +992,128 @@ h2 {
   color: var(--color-muted);
 }
 
+.services-section {
+  --service-surface: #eff1f1;
+  --service-ink-muted: #5a6470;
+}
+
+.services-showroom__cta {
+  margin-top: 0.5rem;
+}
+
+.service-card {
+  display: grid;
+  gap: 1.1rem;
+  min-height: auto;
+  padding: 0;
+  overflow: hidden;
+  color: inherit;
+  text-decoration: none;
+  border-radius: var(--radius-card);
+  background: rgb(255 253 250 / 72%);
+  border: 1px solid rgb(222 228 232 / 90%);
+  box-shadow: var(--shadow-soft);
+  transition:
+    border-color var(--motion-fast),
+    box-shadow var(--motion-fast),
+    transform var(--motion-fast);
+}
+
+.service-card:hover {
+  border-color: rgb(29 37 45 / 18%);
+  box-shadow: var(--shadow-lifted);
+  transform: translateY(-4px);
+}
+
+.service-card__copy {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0 1.35rem 1.5rem;
+}
+
+.service-card h2 {
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  letter-spacing: -0.03em;
+}
+
+.service-card p {
+  margin: 0;
+  color: var(--service-ink-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.status-pill--service {
+  color: #3d4a56;
+  background: rgb(223 229 234 / 90%);
+}
+
+.service-media {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgb(255 255 255 / 68%), rgb(29 37 45 / 16%)),
+    radial-gradient(circle at 28% 22%, #f6f8f9, #d5dde3 46%, #7b8794 100%);
+}
+
+.service-media--card {
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+}
+
+.service-media--large {
+  min-height: 420px;
+  border-radius: 42px;
+  box-shadow: var(--shadow-soft);
+}
+
+.service-media__image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.service-media__image--fallback {
+  opacity: 0;
+}
+
+.service-detail__copy {
+  display: grid;
+  gap: 1rem;
+  align-content: start;
+}
+
+.service-detail__block {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.service-detail__heading {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--service-ink-muted);
+}
+
+.service-detail .benefit-list {
+  margin-bottom: 0;
+}
+
+.service-detail .scope-copy {
+  margin-bottom: 0;
+}
+
 .services-section .surface-card,
 .services-section .detail-media {
   background:
     linear-gradient(145deg, rgb(255 255 255 / 70%), rgb(29 37 45 / 13%)),
-    #eff1f1;
+    var(--service-surface);
 }
 
 .hero-image--home {
@@ -1223,7 +1339,8 @@ h2 {
 
   .hero-image,
   .detail-media,
-  .product-gallery__media {
+  .product-gallery__media,
+  .service-media--large {
     min-height: 340px;
   }
 

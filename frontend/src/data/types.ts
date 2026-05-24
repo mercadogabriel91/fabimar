@@ -37,6 +37,7 @@ export type Product = {
 export type Service = {
   id: string
   name: string
+  highlight: string
   summary: string
   description: string
   benefits: string[]

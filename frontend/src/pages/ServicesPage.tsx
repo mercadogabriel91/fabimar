@@ -1,27 +1,36 @@
-import { Link } from 'react-router-dom'
+import { ServiceCard } from '../components/services/ServiceCard.tsx'
+import { PrimaryButton } from '../components/ui/PrimaryButton.tsx'
+import { ResponsiveGrid } from '../components/ui/ResponsiveGrid.tsx'
+import { Section } from '../components/ui/Section.tsx'
+import { ctas } from '../data/ctas.ts'
 import { services } from '../data/services.ts'
+import { usePageMeta } from '../hooks/usePageMeta.ts'
 
 export function ServicesPage() {
+  usePageMeta({
+    title: 'Servicios | Fabimar',
+    description:
+      'Mudanzas, distribucion B2B, logistica integral y transporte especializado con criterio operativo Fabimar.',
+  })
+
   return (
-    <section className="page-section services-section">
+    <Section className="services-section services-showroom">
       <p className="eyebrow">Servicios Fabimar</p>
       <h1>Movimiento, precision y compromiso.</h1>
       <p className="lede">
-        Vidriera sobria para mostrar capacidad operativa sin convertir la web
-        en una pieza corporativa pesada.
+        Operaciones sobrias para empresas y hogares que necesitan confianza, claridad
+        y seguimiento humano en cada etapa.
       </p>
-      <div className="route-grid">
+      <ResponsiveGrid columns={2} aria-label="Servicios Fabimar">
         {services.map((service) => (
-          <Link
-            className="surface-card service-card"
-            key={service.id}
-            to={`/servicios/${service.id}`}
-          >
-            <h2>{service.name}</h2>
-            <p>{service.summary}</p>
-          </Link>
+          <ServiceCard key={service.id} service={service} />
         ))}
+      </ResponsiveGrid>
+      <div className="services-showroom__cta">
+        <PrimaryButton href={ctas.general.whatsappUrl} external>
+          {ctas.general.label}
+        </PrimaryButton>
       </div>
-    </section>
+    </Section>
   )
 }

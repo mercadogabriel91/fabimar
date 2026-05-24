@@ -301,7 +301,7 @@ Acceptance criteria:
 
 ### SPEC-006: Services Showroom
 
-Status: Not started
+Status: Complete
 
 Goal: validate the parallel services world with a sober, professional visual treatment.
 
@@ -323,24 +323,24 @@ Out of scope:
 
 Tasks:
 
-- [ ] Define service fixture type.
-- [ ] Create fixtures for Mudanzas.
-- [ ] Create fixtures for Distribucion B2B.
-- [ ] Create fixtures for Logistica Integral.
-- [ ] Create fixtures for Transporte Especializado.
-- [ ] Build services listing route.
-- [ ] Build large visual service cards.
-- [ ] Build service detail route or panel.
-- [ ] Render benefits.
-- [ ] Render geographic scope.
-- [ ] Add service-specific WhatsApp CTA.
-- [ ] Tune visual tone to feel more corporate than products.
+- [x] Define service fixture type.
+- [x] Create fixtures for Mudanzas.
+- [x] Create fixtures for Distribucion B2B.
+- [x] Create fixtures for Logistica Integral.
+- [x] Create fixtures for Transporte Especializado.
+- [x] Build services listing route.
+- [x] Build large visual service cards.
+- [x] Build service detail route or panel.
+- [x] Render benefits.
+- [x] Render geographic scope.
+- [x] Add service-specific WhatsApp CTA.
+- [x] Tune visual tone to feel more corporate than products.
 
 Acceptance criteria:
 
-- [ ] A reviewer understands the service offering without reading a long page.
-- [ ] Services feel related to products but more sober and trust-oriented.
-- [ ] Each service can trigger a relevant inquiry CTA.
+- [x] A reviewer understands the service offering without reading a long page.
+- [x] Services feel related to products but more sober and trust-oriented.
+- [x] Each service can trigger a relevant inquiry CTA.
 
 ### SPEC-007: Purpose Page
 
