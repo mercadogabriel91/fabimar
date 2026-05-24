@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { ctas } from '../../data/ctas.ts'
+import { useWishlist } from '../../hooks/useWishlist.ts'
 import { routes } from '../../routes.ts'
 
 type AppShellProps = {
@@ -16,6 +17,7 @@ const navigationItems = [
 
 export function AppShell({ children }: AppShellProps) {
   const location = useLocation()
+  const { count: wishlistCount } = useWishlist()
 
   return (
     <div className="app-shell">
@@ -27,6 +29,11 @@ export function AppShell({ children }: AppShellProps) {
           {navigationItems.map((item) => (
             <NavLink key={item.to} to={item.to}>
               {item.label}
+              {item.to === routes.wishlist && wishlistCount > 0 ? (
+                <span className="nav-count" aria-label={`${wishlistCount} productos`}>
+                  {wishlistCount}
+                </span>
+              ) : null}
             </NavLink>
           ))}
         </nav>
