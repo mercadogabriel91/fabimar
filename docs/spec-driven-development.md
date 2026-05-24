@@ -378,7 +378,7 @@ Acceptance criteria:
 
 ### SPEC-008: Wishlist And Quote Simulation
 
-Status: Not started
+Status: Complete
 
 Goal: demonstrate the quote pathway without backend persistence.
 
@@ -399,21 +399,21 @@ Out of scope:
 
 Tasks:
 
-- [ ] Choose local state approach for wishlist.
-- [ ] Store selected products locally.
-- [ ] Add remove-from-wishlist behavior.
-- [ ] Build wishlist route.
-- [ ] Show selected product summary.
-- [ ] Add simulated quote request CTA.
-- [ ] Add optional contact form UI without persistence.
-- [ ] Add empty wishlist state.
-- [ ] Add copy explaining human follow-up.
+- [x] Choose local state approach for wishlist.
+- [x] Store selected products locally.
+- [x] Add remove-from-wishlist behavior.
+- [x] Build wishlist route.
+- [x] Show selected product summary.
+- [x] Add simulated quote request CTA.
+- [x] Add optional contact form UI without persistence.
+- [x] Add empty wishlist state.
+- [x] Add copy explaining human follow-up.
 
 Acceptance criteria:
 
-- [ ] A reviewer can add products to a wishlist.
-- [ ] A reviewer can understand how wishlist becomes a quote conversation later.
-- [ ] No backend dependency exists.
+- [x] A reviewer can add products to a wishlist.
+- [x] A reviewer can understand how wishlist becomes a quote conversation later.
+- [x] No backend dependency exists.
 
 ### SPEC-009: Polish, Performance, And Accessibility
 
