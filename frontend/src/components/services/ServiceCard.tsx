@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Service } from '../../data/types.ts'
+import { routes } from '../../routes.ts'
 import { ServiceMedia } from './ServiceMedia.tsx'
 
 type ServiceCardProps = {
@@ -8,7 +9,7 @@ type ServiceCardProps = {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <Link className="service-card" to={`/servicios/${service.id}`}>
+    <Link className="service-card" to={routes.serviceDetail(service.id)}>
       <ServiceMedia image={service.image} name={service.name} />
       <div className="service-card__copy">
         <span className="status-pill status-pill--service">{service.highlight}</span>

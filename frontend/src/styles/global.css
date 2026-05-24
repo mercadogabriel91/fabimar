@@ -1122,6 +1122,40 @@ h2 {
     radial-gradient(circle at 30% 20%, #ffffff, #e8e0d4 42%, #9a8f82 100%);
 }
 
+.purpose-page .hero-copy {
+  gap: 1.35rem;
+}
+
+.purpose-block {
+  display: grid;
+  gap: 0.65rem;
+  max-width: 640px;
+  padding: 1.25rem 0 0.25rem;
+  border-top: 1px solid rgb(222 216 206 / 70%);
+}
+
+.purpose-block__label {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.purpose-block__body {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.hero-image--purpose {
+  background:
+    linear-gradient(155deg, rgb(255 255 255 / 52%), rgb(45 58 72 / 20%)),
+    radial-gradient(circle at 34% 22%, #fafbfc, #d8dee6 44%, #7a8796 100%);
+}
+
 .detail-panel-root {
   position: fixed;
   inset: 0;

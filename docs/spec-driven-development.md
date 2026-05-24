@@ -344,7 +344,7 @@ Acceptance criteria:
 
 ### SPEC-007: Purpose Page
 
-Status: Not started
+Status: Complete
 
 Goal: include the Fabimar purpose message without making it mystical or heavy.
 
@@ -363,16 +363,16 @@ Out of scope:
 
 Tasks:
 
-- [ ] Draft concise purpose page fixture copy.
-- [ ] Build purpose route.
-- [ ] Add visual layout consistent with the home page.
-- [ ] Reference Human Awakening in grounded language.
-- [ ] Add links back to Productos and Servicios.
+- [x] Draft concise purpose page fixture copy.
+- [x] Build purpose route.
+- [x] Add visual layout consistent with the home page.
+- [x] Reference Human Awakening in grounded language.
+- [x] Add links back to Productos and Servicios.
 
 Acceptance criteria:
 
-- [ ] The page supports the brand concept without distracting from conversion.
-- [ ] The language feels human, calm, and non-technical.
+- [x] The page supports the brand concept without distracting from conversion.
+- [x] The language feels human, calm, and non-technical.
 
 ## STAGE-3: Conversion Simulation And Demo Readiness
 

@@ -9,6 +9,7 @@ import { brands } from '../data/brands.ts'
 import { products } from '../data/products.ts'
 import { usePageMeta } from '../hooks/usePageMeta.ts'
 import { useShowroomPanel } from '../hooks/useShowroomPanel.ts'
+import { routes } from '../routes.ts'
 
 export function BrandPage() {
   const { brandId } = useParams()
@@ -26,7 +27,7 @@ export function BrandPage() {
       <Section>
         <p className="eyebrow">Marca</p>
         <h1>Marca no encontrada</h1>
-        <Link className="text-link" to="/productos">
+        <Link className="text-link" to={routes.products}>
           Volver a productos
         </Link>
       </Section>
@@ -39,7 +40,7 @@ export function BrandPage() {
     <>
       <Section className="showroom-page showroom-page--brand">
         <div className="showroom-toolbar">
-          <Link className="text-link" to="/productos">
+          <Link className="text-link" to={routes.products}>
             Volver a productos
           </Link>
         </div>

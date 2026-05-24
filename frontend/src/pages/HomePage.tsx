@@ -4,6 +4,7 @@ import { PrimaryButton } from '../components/ui/PrimaryButton.tsx'
 import { Section } from '../components/ui/Section.tsx'
 import { ctas } from '../data/ctas.ts'
 import { usePageMeta } from '../hooks/usePageMeta.ts'
+import { routes } from '../routes.ts'
 
 export function HomePage() {
   usePageMeta({
@@ -24,11 +25,11 @@ export function HomePage() {
             calma.
           </p>
           <div className="hero-actions" aria-label="Caminos principales">
-            <Link className="door-card door-card--products" to="/productos">
+            <Link className="door-card door-card--products" to={routes.products}>
               <span>Productos</span>
               <small>Curados por calidad, diseno y confianza.</small>
             </Link>
-            <Link className="door-card door-card--services" to="/servicios">
+            <Link className="door-card door-card--services" to={routes.services}>
               <span>Servicios</span>
               <small>Movimiento, precision y compromiso.</small>
             </Link>
@@ -37,7 +38,7 @@ export function HomePage() {
             <PrimaryButton href={ctas.general.whatsappUrl}>
               {ctas.general.label}
             </PrimaryButton>
-            <CtaLink to="/proposito">Conocer nuestro proposito</CtaLink>
+            <CtaLink to={routes.purpose}>Conocer nuestro proposito</CtaLink>
           </div>
         </div>
         <div
@@ -52,7 +53,7 @@ export function HomePage() {
         <p className="purpose-quote">
           Elegir bien tambien es una forma de conciencia.
         </p>
-        <CtaLink to="/proposito">Leer sobre nuestro proposito</CtaLink>
+        <CtaLink to={routes.purpose}>Leer sobre nuestro proposito</CtaLink>
       </Section>
     </>
   )

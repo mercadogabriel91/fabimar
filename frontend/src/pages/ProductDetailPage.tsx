@@ -6,6 +6,7 @@ import { ProductGallery } from '../components/products/ProductGallery.tsx'
 import { getBrandName } from '../data/brands.ts'
 import { getProductById } from '../data/products.ts'
 import { usePageMeta } from '../hooks/usePageMeta.ts'
+import { routes } from '../routes.ts'
 
 export function ProductDetailPage() {
   const { productId } = useParams()
@@ -21,7 +22,7 @@ export function ProductDetailPage() {
       <section className="page-section">
         <p className="eyebrow">Producto</p>
         <h1>Producto no encontrado</h1>
-        <Link className="text-link" to="/productos">
+        <Link className="text-link" to={routes.products}>
           Volver a productos
         </Link>
       </section>
@@ -39,7 +40,7 @@ export function ProductDetailPage() {
         isUsed={isUsed}
       />
       <div className="product-detail__copy">
-        <Link className="text-link" to="/productos">
+        <Link className="text-link" to={routes.products}>
           Volver a productos
         </Link>
         <p className="eyebrow">{getBrandName(product.brandId)}</p>

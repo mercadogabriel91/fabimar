@@ -1,16 +1,17 @@
 import type { ReactNode } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { ctas } from '../../data/ctas.ts'
+import { routes } from '../../routes.ts'
 
 type AppShellProps = {
   children: ReactNode
 }
 
 const navigationItems = [
-  { label: 'Productos', to: '/productos' },
-  { label: 'Servicios', to: '/servicios' },
-  { label: 'Proposito', to: '/proposito' },
-  { label: 'Wishlist', to: '/wishlist' },
+  { label: 'Productos', to: routes.products },
+  { label: 'Servicios', to: routes.services },
+  { label: 'Proposito', to: routes.purpose },
+  { label: 'Wishlist', to: routes.wishlist },
 ]
 
 export function AppShell({ children }: AppShellProps) {
