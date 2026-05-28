@@ -19,7 +19,7 @@ export function PrimaryButton({
     <a
       className={classes}
       href={href}
-      {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+      {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
     >
       {children}
     </a>

@@ -1,5 +1,6 @@
 import { getBrandName } from '../../data/brands.ts'
 import type { Product } from '../../data/types.ts'
+import { productCardImageSizes } from '../../lib/imageSizes.ts'
 
 type ProductCardProps = {
   product: Product
@@ -28,6 +29,7 @@ export function ProductCard({ product, onSelect }: ProductCardProps) {
           className="showroom-product-card__image"
           src={product.images[0]}
           alt=""
+          sizes={productCardImageSizes}
           loading="lazy"
           decoding="async"
           onError={(event) => {

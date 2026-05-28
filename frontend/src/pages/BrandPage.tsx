@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { PageNotFound } from '../components/ui/PageNotFound.tsx'
 import { ProductFilters, type StateFilter } from '../components/products/ProductFilters.tsx'
 import { ProductGrid } from '../components/products/ProductGrid.tsx'
 import { ProductPreviewPanel } from '../components/products/ProductPreviewPanel.tsx'
@@ -24,13 +25,12 @@ export function BrandPage() {
 
   if (!brand) {
     return (
-      <Section>
-        <p className="eyebrow">Marca</p>
-        <h1>Marca no encontrada</h1>
+      <PageNotFound eyebrow="Marca" title="Marca no encontrada">
+        <p className="lede">No encontramos este universo de marca en la demo actual.</p>
         <Link className="text-link" to={routes.products}>
           Volver a productos
         </Link>
-      </Section>
+      </PageNotFound>
     )
   }
 

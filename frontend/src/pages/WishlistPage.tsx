@@ -10,6 +10,7 @@ import { getProductById } from '../data/products.ts'
 import type { Product } from '../data/types.ts'
 import { usePageMeta } from '../hooks/usePageMeta.ts'
 import { useWishlist } from '../hooks/useWishlist.ts'
+import { wishlistThumbImageSizes } from '../lib/imageSizes.ts'
 import { routes } from '../routes.ts'
 
 function resolveWishlistProducts(productIds: string[]): Product[] {
@@ -97,6 +98,7 @@ export function WishlistPage() {
                     className="wishlist-item__image"
                     src={product.images[0]}
                     alt=""
+                    sizes={wishlistThumbImageSizes}
                     loading="lazy"
                     decoding="async"
                   />

@@ -1,3 +1,5 @@
+import { serviceCardImageSizes } from '../../lib/imageSizes.ts'
+
 type ServiceMediaProps = {
   image: string
   name: string
@@ -16,7 +18,9 @@ export function ServiceMedia({ image, name, large = false }: ServiceMediaProps) 
         className="service-media__image"
         src={image}
         alt=""
+        sizes={serviceCardImageSizes}
         loading={large ? 'eager' : 'lazy'}
+        fetchPriority={large ? 'high' : 'auto'}
         decoding="async"
         onError={(event) => {
           event.currentTarget.classList.add('service-media__image--fallback')
