@@ -12,6 +12,7 @@ export function BrandCard({ brand, productCount }: BrandCardProps) {
     <Link
       className={`showroom-brand-card showroom-brand-card--${brand.visualTone}`}
       to={routes.brand(brand.id)}
+      aria-label={`Explorar universo ${brand.name}, ${productCount} productos`}
     >
       <span className="showroom-brand-card__mark">{brand.logoLabel}</span>
       <h2>{brand.name}</h2>

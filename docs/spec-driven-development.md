@@ -417,7 +417,7 @@ Acceptance criteria:
 
 ### SPEC-009: Polish, Performance, And Accessibility
 
-Status: Not started
+Status: Complete
 
 Goal: make the MVP credible enough for stakeholder review.
 
@@ -438,25 +438,25 @@ Out of scope:
 
 Tasks:
 
-- [ ] Audit all MVP routes on mobile.
-- [ ] Audit all MVP routes on desktop.
-- [ ] Optimize image sizes and loading behavior.
-- [ ] Add empty states for missing or filtered content.
-- [ ] Add route metadata.
-- [ ] Check keyboard navigation.
-- [ ] Check heading hierarchy.
-- [ ] Check alt text.
-- [ ] Check color contrast.
-- [ ] Add restrained transitions where useful.
-- [ ] Run lint.
-- [ ] Run typecheck.
-- [ ] Run production build.
+- [x] Audit all MVP routes on mobile.
+- [x] Audit all MVP routes on desktop.
+- [x] Optimize image sizes and loading behavior.
+- [x] Add empty states for missing or filtered content.
+- [x] Add route metadata.
+- [x] Check keyboard navigation.
+- [x] Check heading hierarchy.
+- [x] Check alt text.
+- [x] Check color contrast.
+- [x] Add restrained transitions where useful.
+- [x] Run lint.
+- [x] Run typecheck.
+- [x] Run production build.
 
 Acceptance criteria:
 
-- [ ] The MVP feels intentional and smooth in review.
-- [ ] Core navigation works without a mouse.
-- [ ] Build, lint, and typecheck pass.
+- [x] The MVP feels intentional and smooth in review.
+- [x] Core navigation works without a mouse.
+- [x] Build, lint, and typecheck pass.
 
 ### SPEC-010: Demo Deployment
 

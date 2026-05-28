@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import type { VisualTone } from '../../data/types.ts'
+import { productGalleryImageSizes } from '../../lib/imageSizes.ts'
 
 type ProductGalleryProps = {
   images: string[]
@@ -18,6 +19,10 @@ export function ProductGallery({
 }: ProductGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const activeImage = images[activeIndex] ?? images[0]
+  const imageAlt =
+    images.length > 1
+      ? `${name}, vista ${activeIndex + 1} de ${images.length}`
+      : name
   const mediaClass = [
     compact ? 'product-gallery__media product-gallery__media--compact' : 'product-gallery__media',
     `product-gallery__media--${visualTone}`,
@@ -35,8 +40,10 @@ export function ProductGallery({
         <img
           className="product-gallery__image"
           src={activeImage}
-          alt=""
+          alt={imageAlt}
+          sizes={productGalleryImageSizes}
           loading={compact ? 'lazy' : 'eager'}
+          fetchPriority={compact ? 'auto' : 'high'}
           decoding="async"
           onError={(event) => {
             event.currentTarget.classList.add('product-gallery__image--fallback')

@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { PageNotFound } from '../components/ui/PageNotFound.tsx'
 import { ServiceMedia } from '../components/services/ServiceMedia.tsx'
 import { PrimaryButton } from '../components/ui/PrimaryButton.tsx'
 import { getServiceById } from '../data/services.ts'
@@ -16,13 +17,12 @@ export function ServiceDetailPage() {
 
   if (!service) {
     return (
-      <section className="page-section services-section">
-        <p className="eyebrow">Servicio</p>
-        <h1>Servicio no encontrado</h1>
+      <PageNotFound eyebrow="Servicio" title="Servicio no encontrado">
+        <p className="lede">El servicio solicitado no esta disponible en esta demo.</p>
         <Link className="text-link" to={routes.services}>
           Volver a servicios
         </Link>
-      </section>
+      </PageNotFound>
     )
   }
 

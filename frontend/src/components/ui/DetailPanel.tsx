@@ -1,5 +1,6 @@
 import { useEffect, useId, useRef, type ReactNode } from 'react'
 import { createPortal } from 'react-dom'
+import { trapFocus } from '../../lib/focusTrap.ts'
 
 type DetailPanelProps = {
   open: boolean
@@ -17,6 +18,8 @@ export function DetailPanel({
   children,
 }: DetailPanelProps) {
   const titleId = useId()
+  const panelRef = useRef<HTMLElement>(null)
+  const closeRef = useRef<HTMLButtonElement>(null)
   const bodyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -64,6 +67,15 @@ export function DetailPanel({
     bodyRef.current?.scrollTo({ top: 0 })
   }, [open, title])
 
+  useEffect(() => {
+    if (!open || !panelRef.current) {
+      return
+    }
+
+    closeRef.current?.focus()
+    return trapFocus(panelRef.current)
+  }, [open])
+
   if (!open) {
     return null
   }
@@ -77,6 +89,7 @@ export function DetailPanel({
         onClick={onClose}
       />
       <aside
+        ref={panelRef}
         className="detail-panel"
         role="dialog"
         aria-modal="true"
@@ -88,6 +101,7 @@ export function DetailPanel({
             <h2 id={titleId}>{title}</h2>
           </div>
           <button
+            ref={closeRef}
             type="button"
             className="detail-panel-close"
             aria-label="Cerrar"

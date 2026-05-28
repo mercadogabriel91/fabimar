@@ -21,25 +21,40 @@ export function AppShell({ children }: AppShellProps) {
 
   return (
     <div className="app-shell">
+      <a className="skip-link" href="#main-content">
+        Saltar al contenido principal
+      </a>
       <header className="site-header">
         <NavLink className="brand-mark" to="/" aria-label="Ir al inicio">
           FABIMAR
         </NavLink>
         <nav className="site-nav" aria-label="Principal">
-          {navigationItems.map((item) => (
-            <NavLink key={item.to} to={item.to}>
-              {item.label}
-              {item.to === routes.wishlist && wishlistCount > 0 ? (
-                <span className="nav-count" aria-label={`${wishlistCount} productos`}>
-                  {wishlistCount}
-                </span>
-              ) : null}
-            </NavLink>
-          ))}
+          {navigationItems.map((item) => {
+            const showWishlistCount = item.to === routes.wishlist && wishlistCount > 0
+
+            return (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                aria-label={
+                  showWishlistCount
+                    ? `${item.label}, ${wishlistCount} productos`
+                    : undefined
+                }
+              >
+                {item.label}
+                {showWishlistCount ? (
+                  <span className="nav-count" aria-hidden="true">
+                    {wishlistCount}
+                  </span>
+                ) : null}
+              </NavLink>
+            )
+          })}
         </nav>
       </header>
 
-      <main className="route-stage" key={location.pathname}>
+      <main id="main-content" className="route-stage" key={location.pathname} tabIndex={-1}>
         {children}
       </main>
 

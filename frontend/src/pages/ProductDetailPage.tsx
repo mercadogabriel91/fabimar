@@ -1,4 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
+import { PageNotFound } from '../components/ui/PageNotFound.tsx'
 import { ProductDetailActions } from '../components/products/ProductDetailActions.tsx'
 import { ProductDetailMeta } from '../components/products/ProductDetailMeta.tsx'
 import { ProductFeatureBadges } from '../components/products/ProductFeatureBadges.tsx'
@@ -19,13 +20,12 @@ export function ProductDetailPage() {
 
   if (!product) {
     return (
-      <section className="page-section">
-        <p className="eyebrow">Producto</p>
-        <h1>Producto no encontrado</h1>
+      <PageNotFound eyebrow="Producto" title="Producto no encontrado">
+        <p className="lede">El enlace puede estar desactualizado o el producto ya no esta en la vidriera demo.</p>
         <Link className="text-link" to={routes.products}>
           Volver a productos
         </Link>
-      </section>
+      </PageNotFound>
     )
   }
 
