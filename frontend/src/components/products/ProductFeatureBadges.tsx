@@ -5,6 +5,7 @@ type ProductFeatureBadgesProps = {
 }
 
 export function ProductFeatureBadges({ product }: ProductFeatureBadgesProps) {
+  
   if (!product.supports360 && !product.supports3d) {
     return null
   }
