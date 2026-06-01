@@ -15,8 +15,8 @@ export const products: Product[] = [
       'Pantalla central, organización visual y una presencia que ordena la cocina sin gritar.',
     images: [
       '/fixtures/products/samsung-family-hub-01.jpg',
-      '/fixtures/products/samsung-family-hub-01.jpg',
-      '/fixtures/products/samsung-family-hub-01.jpg',
+      '/fixtures/products/samsung-family-hub-02.jpg',
+      '/fixtures/products/samsung-family-hub-03.jpg',
     ],
     visualTone: 'cool',
     supports360: true,
@@ -38,7 +38,7 @@ export const products: Product[] = [
       'Modularidad Bespoke con una segunda vida revisada, lista para integrarse a tu cocina.',
     images: [
       '/fixtures/products/samsung-bespoke-cool-01.jpg',
-      '/fixtures/products/samsung-bespoke-cool-01.jpg',
+      '/fixtures/products/samsung-bespoke-cool-02.jpg',
     ],
     visualTone: 'cool',
     supports360: false,
@@ -60,7 +60,7 @@ export const products: Product[] = [
       'Climatización eficiente y silenciosa, seleccionada para rendir sin comprometer el ambiente.',
     images: [
       '/fixtures/products/lg-dual-inverter-01.jpg',
-      '/fixtures/products/lg-dual-inverter-01.jpg',
+      '/fixtures/products/lg-dual-inverter-02.jpg',
     ],
     visualTone: 'neutral',
     supports360: false,
@@ -82,7 +82,7 @@ export const products: Product[] = [
       'Frente espejado y flujo suave para living premium donde el equipo desaparece en la arquitectura.',
     images: [
       '/fixtures/products/lg-artcool-mirror-01.jpg',
-      '/fixtures/products/lg-artcool-mirror-01.jpg',
+      '/fixtures/products/lg-artcool-mirror-02.jpg',
       '/fixtures/products/lg-artcool-mirror-01.jpg',
     ],
     visualTone: 'neutral',
@@ -105,7 +105,7 @@ export const products: Product[] = [
       'Tecnología cotidiana con operación silenciosa y una estética cálida que invita al uso diario.',
     images: [
       '/fixtures/products/whirlpool-silent-care-01.jpg',
-      '/fixtures/products/whirlpool-silent-care-01.jpg',
+      '/fixtures/products/whirlpool-silent-care-02.jpg',
       '/fixtures/products/whirlpool-silent-care-01.jpg',
     ],
     visualTone: 'warm',
@@ -128,7 +128,7 @@ export const products: Product[] = [
       'Control intuitivo y capacidad generosa, curado para hogares que necesitan orden y respuesta rápida.',
     images: [
       '/fixtures/products/whirlpool-6th-sense-01.jpg',
-      '/fixtures/products/whirlpool-6th-sense-01.jpg',
+      '/fixtures/products/whirlpool-6th-sense-02.jpg',
     ],
     visualTone: 'warm',
     supports360: false,
@@ -150,7 +150,7 @@ export const products: Product[] = [
       'Microorificios WindFree para dormir sin corrientes directas, con presencia sobria en el ambiente.',
     images: [
       '/fixtures/products/samsung-windfree-01.jpg',
-      '/fixtures/products/samsung-windfree-01.jpg',
+      '/fixtures/products/samsung-windfree-02.jpg',
       '/fixtures/products/samsung-windfree-01.jpg',
     ],
     visualTone: 'cool',
@@ -173,7 +173,7 @@ export const products: Product[] = [
       'Dos golpes en el panel InstaView y acceso inmediato, con una pieza usada certificada por Fabimar.',
     images: [
       '/fixtures/products/lg-instaview-01.jpg',
-      '/fixtures/products/lg-instaview-01.jpg',
+      '/fixtures/products/lg-instaview-02.jpg',
       '/fixtures/products/lg-instaview-01.jpg',
     ],
     visualTone: 'neutral',

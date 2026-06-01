@@ -45,7 +45,19 @@ export function HomePage() {
           className="hero-image hero-image--home"
           role="img"
           aria-label="Espacio Fabimar: materiales, movimiento y calma visual"
-        />
+        >
+          <img
+            className="hero-image__photo"
+            src="/fixtures/home/hero.jpg"
+            alt=""
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            onError={(event) => {
+              event.currentTarget.classList.add('hero-image__photo--fallback')
+            }}
+          />
+        </div>
       </section>
 
       <Section variant="subtle" className="home-purpose-band">

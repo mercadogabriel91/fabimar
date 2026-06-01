@@ -40,7 +40,19 @@ export function PurposePage() {
         className="hero-image hero-image--purpose"
         role="img"
         aria-label="Calma visual Fabimar: proposito, materia y conciencia"
-      />
+      >
+        <img
+          className="hero-image__photo"
+          src="/fixtures/home/purpose-hero.jpg"
+          alt=""
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+          onError={(event) => {
+            event.currentTarget.classList.add('hero-image__photo--fallback')
+          }}
+        />
+      </div>
     </section>
   )
 }
